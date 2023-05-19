@@ -37,7 +37,29 @@
     </div>
     <div class="container">
         <main>
-            <h1 class="text-center mt-5">Benvenuto in Features</h1>
+            <h1 class="text-center mt-5">{{ $title }}</h1>
+            <h3 class="text-center mt-3">{{ $description }}</h3>
+            <div class="mt-5">
+                <p>
+                    Laravel è un framework per applicazioni web con una sintassi espressiva ed elegante. Un framework
+                    web
+                    fornisce una struttura e un punto di partenza per creare la tua applicazione, permettendoti di
+                    concentrarti sulla creazione di qualcosa di straordinario mentre ci occupiamo dei dettagli.
+                </p>
+                <p>
+                    Laravel si impegna a fornire un'esperienza di sviluppo straordinaria fornendo allo stesso tempo
+                    potenti
+                    funzionalità come un'integrazione completa delle dipendenze, un livello di astrazione del database
+                    espressivo, code e lavori pianificati, test di unità e integrazione e altro ancora.
+                </p>
+                <p>
+                    Che tu sia nuovo ai framework web PHP o che tu abbia anni di esperienza, Laravel è un framework che
+                    può
+                    crescere con te. Ti aiuteremo a muovere i primi passi come sviluppatore web o ti daremo una spinta
+                    mentre porti la tua esperienza al livello successivo. Non vediamo l'ora di vedere cosa costruisci.
+                </p>
+            </div>
+
         </main>
     </div>
     {{-- Bootstrap script --}}

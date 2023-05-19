@@ -30,8 +30,11 @@ Route::get('/', function () {
 });
 
 Route::get('/features', function () {
-    return view('features');
-});
+    $title = 'Benvenuto in Features';
+    $description = 'Quì troverai le nostre caratteristiche';
+    return view('features', compact('title', 'description'));
+})->name('features');
+
 Route::get('/pricing', function () {
     return view('pricing');
 });
