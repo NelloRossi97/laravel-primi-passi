@@ -37,7 +37,23 @@
     </div>
     <div class="container">
         <main>
-            <h1 class="text-center mt-5">Benvenuto in Pricing</h1>
+            <h1 class="text-center mt-5">{{ $title }}</h1>
+            <div class="row mt-5">
+                @foreach ($prices as $price)
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="text-center">
+                                    {{ $plans[$loop->index] }}
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="text-center">{{ $price }} &euro;</h3>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </main>
     </div>
     {{-- Bootstrap script --}}

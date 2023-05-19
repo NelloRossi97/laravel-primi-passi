@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ************** HOME **************
 Route::get('/', function () {
     $data = [
         'title' => 'Benvenuto nella Home del nostro sito',
@@ -29,18 +30,39 @@ Route::get('/', function () {
     return view('home', $data);
 });
 
+// ************** FEATURES **************
 Route::get('/features', function () {
     $title = 'Benvenuto in Features';
     $description = 'Quì troverai le nostre caratteristiche';
     return view('features', compact('title', 'description'));
 })->name('features');
 
+// ************** PRICING **************
 Route::get('/pricing', function () {
-    return view('pricing');
-});
+    $data = [
+        'title' => 'Benvenuto in Pricing',
+        'plans' => [
+            '1 Mese',
+            '3 Mesi',
+            '6 Mesi',
+            '1 Anno'
+        ],
+        'prices' => [
+            10,
+            25,
+            40,
+            60
+        ]
+    ];
+    return view('pricing', $data);
+})->name('pricing');
+
+// ************** FAQS **************
 Route::get('faqs', function () {
     return view('faqs');
 });
+
+// ************** ABOUT **************
 Route::get('/about', function () {
     return view('about');
 });
