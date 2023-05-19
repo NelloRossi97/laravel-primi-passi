@@ -37,7 +37,7 @@
     </div>
     <div class="container">
         <main>
-            <h1 class="text-center mt-5">Benvenuto in About</h1>
+            <h1 class="text-center mt-5">{{ $title }}</h1>
         </main>
     </div>
     {{-- Bootstrap script --}}

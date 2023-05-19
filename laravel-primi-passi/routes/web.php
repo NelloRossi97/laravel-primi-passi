@@ -59,10 +59,12 @@ Route::get('/pricing', function () {
 
 // ************** FAQS **************
 Route::get('faqs', function () {
-    return view('faqs');
-});
+    $title = 'Benvenuto nelle FAQS';
+    return view('faqs', compact('title'));
+})->name('faqs');
 
 // ************** ABOUT **************
 Route::get('/about', function () {
-    return view('about');
-});
+    $title = 'Benvenuto in About';
+    return view('about', compact('title'));
+})->name('about');
