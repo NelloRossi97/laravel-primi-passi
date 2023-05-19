@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $data = [
+        'title' => 'Benvenuto nel nostro sito',
+        'description' => 'Laravel è un framework per applicazioni web con
+        una sintassi espressiva ed elegante',
+        'steps' => [
+            'composer create-project laravel/laravel example-app',
+            'composer global require laravel/installer',
+            'laravel new example-app',
+            'cd example-app',
+            'php artisan serve'
+        ]
+    ];
     return view('home');
 });
 
