@@ -37,7 +37,20 @@
     </div>
     <div class="container">
         <main>
-            <h1 class="text-center mt-5">Benvenuto nella Home</h1>
+            <h1 class="text-center mt-5">{{ $title }}</h1>
+            <p class="text-center mt-3">{{ $description }}</p>
+            @if ($steps)
+                <h4 class="mt-5">Per installare il nostro Framework devi eseguire i seguenti comandi:</h4>
+                <ul class="mt-3">
+                    @foreach ($steps as $step)
+                        <li>{{ $step }}</li>
+                    @endforeach
+                </ul>
+            @endif
+
+
+
+
         </main>
     </div>
     {{-- Bootstrap script --}}

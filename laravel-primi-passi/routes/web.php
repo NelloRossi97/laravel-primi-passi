@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $data = [
-        'title' => 'Benvenuto nel nostro sito',
+        'title' => 'Benvenuto nella Home del nostro sito',
         'description' => 'Laravel è un framework per applicazioni web con
         una sintassi espressiva ed elegante',
         'steps' => [
@@ -26,7 +26,7 @@ Route::get('/', function () {
             'php artisan serve'
         ]
     ];
-    return view('home');
+    return view('home', $data);
 });
 
 Route::get('/features', function () {
